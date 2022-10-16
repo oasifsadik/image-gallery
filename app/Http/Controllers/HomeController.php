@@ -48,6 +48,16 @@ class HomeController extends Controller
     }
     public function update(Request $request,$id)
     {
-        # code...
+        $category = Category::find($id);
+        $category->update([
+            'name' => $request->name,
+        ]);
+        return redirect('/dashboard');
+    }
+    public function delete($id)
+    {
+        $category = Category::find($id);
+        $category->delete();
+        return redirect('/dashboard');
     }
 }

@@ -9,7 +9,7 @@
             </h1>
         </div>
         <div class="card-body">
-            <form action="{{ url('save') }}" method="POST">
+            <form action="{{ url('update/'.$category->id) }}" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="">Category Name</label>

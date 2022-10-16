@@ -26,3 +26,4 @@ Route::get('/add-category',[HomeController::class, 'add']);
 Route::post('/save',[HomeController::class, 'save']);
 Route::get('/edit/{id}',[HomeController::class, 'edit']);
 Route::post('/update/{id}',[HomeController::class, 'update']);
+Route::get('/delete/{id}',[HomeController::class, 'delete']);
