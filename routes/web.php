@@ -20,7 +20,9 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+//category
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 Route::get('/add-category',[HomeController::class, 'add']);
 Route::post('/save',[HomeController::class, 'save']);
+Route::get('/edit/{id}',[HomeController::class, 'edit']);
+Route::post('/update/{id}',[HomeController::class, 'update']);

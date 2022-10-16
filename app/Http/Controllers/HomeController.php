@@ -40,4 +40,14 @@ class HomeController extends Controller
         ]);
         return redirect('/dashboard')->with('status',"Category Added Successfully");
     }
+
+    public function edit($id)
+    {
+        $category = Category::find($id);
+        return view('admin.edit',compact('category'));
+    }
+    public function update(Request $request,$id)
+    {
+        # code...
+    }
 }
