@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,7 @@ Route::post('/save',[HomeController::class, 'save']);
 Route::get('/edit/{id}',[HomeController::class, 'edit']);
 Route::post('/update/{id}',[HomeController::class, 'update']);
 Route::get('/delete/{id}',[HomeController::class, 'delete']);
+
+//post
+Route::get('post',[PostController::class, 'post']);
+Route::get('add-post',[PostController::class, 'add_post']);
