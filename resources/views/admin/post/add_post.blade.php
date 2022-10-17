@@ -9,8 +9,17 @@
             </h1>
         </div>
         <div class="card-body">
-            <form action="{{ url('save') }}" method="POST">
+            <form action="{{ url('save-post') }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                <div class="form-group m-3">
+                    <label for="category_id">Select Category</label>
+                    <select class="form-control" name="cat_id" id="cat_id">
+                        @foreach ($category as $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
+
+                    </select>
+                </div>
                 <div class="form-group">
                     <label for="">Post Title</label>
                     <input type="text" class="form-control" name="name" placeholder="Enter Post Title" required >
@@ -25,8 +34,19 @@
                     <textarea name="description" id="" cols="80" rows="10" ></textarea>
                 </div>
                 <div class="form-group mt-3" >
-                    <label>Choose Images</label>
-                    <input type="file"  name="images" multiple>
+                    <label>Thamnail</label>
+                    <br>
+                    <input type="file"  name="thamnail" multiple>
+                </div>
+                <div class="form-group mt-3" >
+                    <label>Cover</label>
+                    <br>
+                    <input type="file"  name="cover" multiple>
+                </div>
+                <div class="form-group mt-3" >
+                    <label>Image</label>
+                    <br>
+                    <input type="file"  name="image" multiple>
                 </div>
 
                 <div class="form-group mt-3">

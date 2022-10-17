@@ -32,3 +32,4 @@ Route::get('/delete/{id}',[HomeController::class, 'delete']);
 //post
 Route::get('post',[PostController::class, 'post']);
 Route::get('add-post',[PostController::class, 'add_post']);
+Route::post('save-post',[PostController::class, 'savepost']);

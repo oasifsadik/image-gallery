@@ -11,7 +11,7 @@
     <h1 style="margin-left: 77px; margin-top: 40px;"><a href="index.html"><img src="{{ asset('gallery') }}/images/logo-colored.png" alt="Free HTML5 Bootstrap Website Template"></a></h1>
   <ul style="margin-top: 21px; margin-left: 20px;">
         <li ><a href="{{ url('/dashboard') }}">Dashboard</a></li>
-        <li>Post</li>
+        <li><a href="{{ url('post') }}">Post</a></li>
             {{-- <div class="w3-dropdown-hover" style="margin-left: -19px;">
                 <button class="w3-button">Dropdown
                 <i class="fa fa-caret-down"></i>
@@ -38,7 +38,7 @@
 
 <div style="margin-left:30%">
 
-<div class="w3-container" style="margin-left: -140px;margin-right: 527px;">
+<div class="w3-container" >
 @yield('contant')
 </div>
 

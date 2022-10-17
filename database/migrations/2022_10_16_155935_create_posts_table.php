@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('name');
             $table->mediumText('short_description');
             $table->longText('description');
+            $table->string('thamnail');
+            $table->string('cover');
+            $table->string('image');
             $table->timestamps();
         });
     }
